@@ -1,0 +1,40 @@
+<h2 style="text-align: center;">Update Employee</h2>
+<hr>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()" style="margin-left: 3cm;">
+    <div class="form-group">
+      <label for="name">Employee Name</label>
+      <input type="text" class="form-control" id="employeeName" required [(ngModel)]="employee.employeeName" name="employeeName">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Email Id</label>
+        <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.emailId" name="emailId">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Password</label>
+        <input type="text" class="form-control" id="password" required [(ngModel)]="employee.password" name="password">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Confirm Password</label>
+        <input type="text" class="form-control" id="confirmPassword" required [(ngModel)]="employee.confirmPassword" name="confirmPassword">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="employee.phoneNumber" name="phoneNumber">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Role</label>
+        <input type="text" class="form-control" id="role" required [(ngModel)]="employee.role" name="role">
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button (click)="gotoList()" class="btn btn-primary" style="margin-left: 10px">Back </button><br>
+  </form>
+</div>

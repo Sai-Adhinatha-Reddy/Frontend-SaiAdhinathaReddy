@@ -1,0 +1,33 @@
+<app-home> </app-home>
+<h2 style="text-align: center;">Employee Details</h2>
+<hr>
+<div *ngIf="employee" style="margin-left: 3cm;">
+
+    <div>
+        <label><b>Id: </b></label> {{employee.id}}
+    </div>
+
+    <div>
+        <label><b>Employee Name: </b></label> {{employee.employeeName}}
+    </div>
+
+     <div>
+        <label><b>Email Id: </b></label> {{employee.emailId}}
+    </div>
+
+    <div>
+        <label><b>Password: </b></label> {{employee.password}}
+    </div>
+
+    <div>
+        <label><b>Phone Number: </b></label> {{employee.phoneNumber}}
+    </div>
+
+    <div>
+        <label><b>Role: </b></label> {{employee.role}}
+    </div>
+
+    <br>
+    <button (click)="gotoList()" class="btn btn-primary">Back</button>
+    
+</div>
