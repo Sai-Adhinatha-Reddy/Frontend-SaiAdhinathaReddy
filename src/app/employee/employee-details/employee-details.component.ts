@@ -30,6 +30,6 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   gotoList(){
-    this.router.navigate(['list']);
+    this.router.navigate(['/list']);
   }
 }
