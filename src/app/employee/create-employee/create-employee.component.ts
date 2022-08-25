@@ -40,6 +40,6 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['employees']);
+    this.router.navigate(['list']);
   }
 }
