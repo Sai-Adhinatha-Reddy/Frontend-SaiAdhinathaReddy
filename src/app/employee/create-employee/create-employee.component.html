@@ -1,8 +1,11 @@
 <app-home> </app-home>
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
 <br>
 <h2 style="text-align: center;">Create Employee</h2>
 <hr>
-<div [hidden]="submitted" style="width: 400px;">
+<div style="width: 400px;">
   <form (ngSubmit)="onSubmit()" style="margin-left: 3cm;">
     <div class="form-group">
       <label for="name">Employee Name</label>
@@ -31,15 +34,12 @@
 
      <div class="form-group">
         <label for="name">Role</label>
-        <input type="text" class="form-control" id="role" required [(ngModel)]="employee.role" value="Employee" name="role">
+        <select type="text" class="form-control" id="role" required [(ngModel)]="employee.role" value="Employee" name="role">
+          <option>Employee</option>
+        </select>
      </div>
      <br>
     <button type="submit" class="btn btn-success">Submit</button>
     <button (click)="gotoList()" class="btn btn-primary" style="margin-left: 10px">Back </button>
   </form>
-</div>
-
-<div [hidden]="!submitted">
-  <h4>You submitted successfully!</h4>
-  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
 </div>
