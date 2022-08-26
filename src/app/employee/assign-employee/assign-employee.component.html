@@ -2,25 +2,32 @@
 <br>
 <h2 style="text-align: center;">Assign Employee</h2>
 <hr>
-<div [hidden]="submitted" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()" style="margin-left: 3cm;">
+<div style="width: 400px;">
+  <form style="margin-left: 3cm;">
     <div class="form-group">
       <label for="name">Application Id</label>
-      <input type="text" class="form-control" id="applicationId" required [(ngModel)]="employee.applicationId" name="applicationId">
+      <!--<br>
+      <select >
+        <option *ngFor="let x of employee"> {{x.id}} </option>
+      </select> -->
+        <select type="text" class="form-control" id="applicationId" required [(ngModel)]="employee.applicationId" name="applicationId">
+            <option *ngFor="let x of employee"> {{x.id}} </option>
+        </select>
     </div>
 
     <div class="form-group">
         <label for="name">Employee Id</label>
-        <input type="text" class="form-control" id="employeeId" required [(ngModel)]="employee.id" name="employeeId">
+        <!-- <br>
+        <select >
+            <option *ngFor="let x of employee"> {{x.id}} </option>
+        </select> -->
+        <select type="text" class="form-control" id="employeeId" required [(ngModel)]="employee.id" name="employeeId">
+            <option *ngFor="let x of employee"> {{x.id}} </option>
+        </select>
     </div>
 
-         <br>
+    <br>
     <button type="submit" class="btn btn-success">Assign</button>
     <button (click)="gotoList()" class="btn btn-primary" style="margin-left: 10px">Back </button>
   </form>
-</div>
-
-<div [hidden]="!submitted">
-  <h4>You submitted successfully!</h4>
-  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
 </div>
