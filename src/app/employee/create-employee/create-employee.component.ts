@@ -35,8 +35,14 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
-    this.save();    
+    console.log(this.employee.password, this.employee.confirmPassword);
+    if(this.employee.password === this.employee.confirmPassword) {
+      this.submitted = true;
+      this.save();
+    } else {
+      this.submitted = false;
+    }
+        
   }
 
   gotoList() {
