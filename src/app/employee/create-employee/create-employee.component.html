@@ -25,6 +25,7 @@
     <div class="form-group">
         <label for="name">Confirm Password</label>
         <input type="text" class="form-control" id="confirmPassword" required [(ngModel)]="employee.confirmPassword" name="confirmPassword">
+        <span *ngIf="employee.password !== employee.confirmPassword"> Password doesn't match!</span>
     </div>
 
     <div class="form-group">
